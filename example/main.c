@@ -15,14 +15,14 @@ int main(void)
 	double output1, output2;
     
 	// 模拟更新PID控制器
-	double actual1 = 5.0;
-	double actual2 = 2.0;
+	double feedback1 = 5.0;
+	double feedback2 = 2.0;
 		
     	while(1)
 	{
 		
-		output1 = PID_Iterate(&pid1, target1, actual1);
-		output2 = PID_Iterate(&pid2, target2, actual2);
+		output1 = PID_Iterate(&pid1, target1, feedback1);
+		output2 = PID_Iterate(&pid2, target2, feedback2);
 		
 		// 模拟实际值的变化
 		actual1 += output1;
