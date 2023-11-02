@@ -5,16 +5,16 @@
 int main(void)
 {
 	PIDController pid1, pid2;
-    
-    // 初始化PID控制器
+	    
+	// 初始化PID控制器
 	PID_Init(&pid1, 1.0, 0.5, 0.2, 10.0);
-    PID_Init(&pid2, 0.5, 0.2, 0.1, 5.0);
-    
-    // 设置设定值
+	PID_Init(&pid2, 0.5, 0.2, 0.1, 5.0);
+	    
+    	// 设置设定值
 	double target1 = 10.0;
 	double target2 = 5.0;
     
-    while(1)
+	 while(1)
 	{
 		// 模拟更新PID控制器
 		double actual1 = 5.0;
@@ -23,7 +23,5 @@ int main(void)
 		
 		PID_Iterate( &pid1, target1, actual1, dt );
 		PID_Iterate( &pid2, target2, actual2, dt );
-
-
 	}
 }
