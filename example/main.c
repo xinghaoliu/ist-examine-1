@@ -25,7 +25,7 @@ int main(void)
 		output1=PID_Iterate(&pid1, target1, actual1, dt);
 		output2=PID_Iterate(&pid2, target2, actual2, dt);
 		
-		// 模拟输入变化
+		// 模拟实际值的变化
 		actual1 += 1.0;
         	actual2 += 0.5;
 	}
