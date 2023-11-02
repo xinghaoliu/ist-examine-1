@@ -22,7 +22,7 @@ double PID_Iterate(PIDController *pid,double target,double actual,double dt)
 	pid->output = pid->error * pid->kp + pid->integral * pid->kp +derivative * pid->kd;
 	
 	if(pid->output > pid->output_max) pid->output=pid->output_max;
-    if(pid->output < -pid->output_max) pid->output=-pid->output_max;
+    	if(pid->output < -pid->output_max) pid->output=-pid->output_max;
 	
 	return pid->output;
 }
