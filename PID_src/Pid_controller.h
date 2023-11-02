@@ -9,7 +9,7 @@ typedef struct
 	double output,output_max;
 }PIDController;
 
-//PID_Exported_Functions
+//PID导出函数
 void PID_Init(PIDController *pid,double kp,double ki,double kd,double output_max);
 double PID_Iterate(PIDController *pid,double target,double actual,double dt);
 
