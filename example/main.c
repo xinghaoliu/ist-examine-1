@@ -12,7 +12,7 @@ int main(void)
     	// 设置目标值
 	double target1 = 10.0;
 	double target2 = 5.0;
-	double output1,output2;
+	double output1, output2;
     
 	// 模拟更新PID控制器
 	double actual1 = 5.0;
@@ -22,8 +22,8 @@ int main(void)
     	while(1)
 	{
 		
-		output1=PID_Iterate( &pid1, target1, actual1, dt );
-		output2=PID_Iterate( &pid2, target2, actual2, dt );
+		output1=PID_Iterate(&pid1, target1, actual1, dt);
+		output2=PID_Iterate(&pid2, target2, actual2, dt);
 		
 		// 模拟输入变化
 		actual1 += 1.0;
