@@ -9,7 +9,7 @@ int main(void)
     	PID_Init(&pid1, 1.0, 0.5, 0.2, 10.0);
     	PID_Init(&pid2, 0.5, 0.2, 0.1, 5.0);
     
-    	// 设置设定值
+    	// 设置目标值
 	double target1 = 10.0;
 	double target2 = 5.0;
 	double output1,output2;
