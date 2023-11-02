@@ -1,5 +1,4 @@
-#include "stm32f10x.h"                  // Device header
-#include "Delay.h"
+#include "stm32f10x.h"                 
 #include "Pid_controller.h"
 
 int main(void)
