@@ -17,7 +17,6 @@ int main(void)
 	// 模拟更新PID控制器
 	double actual1 = 5.0;
 	double actual2 = 2.0;
-	double dt = 0.1;
 		
     	while(1)
 	{
@@ -26,7 +25,7 @@ int main(void)
 		output2 = PID_Iterate(&pid2, target2, actual2, dt);
 		
 		// 模拟实际值的变化
-		actual1 += 1.0;
-        	actual2 += 0.5;
+		actual1 += output1;
+        	actual2 += output2;
 	}
 }
