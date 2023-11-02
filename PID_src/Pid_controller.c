@@ -10,14 +10,14 @@ void PID_Init(PIDController *pid, double kp, double ki, double kd, double output
 	pid->output_max = output_max;
 }
 
-double PID_Iterate(PIDController *pid, double target, double actual, double dt)
+double PID_Iterate(PIDController *pid, double target, double actual)
 {
 	pid->prev_error = pid->error;
 	pid->error = target - actual;
 	
-	pid->integral += pid->error * dt;
+	pid->integral += pid->error;
 	
-	double derivative = (pid->error - pid->prev_error) / dt;
+	double derivative = pid->error - pid->prev_error;
 
 	pid->output = pid->error * pid->kp + pid->integral * pid->ki +derivative * pid->kd;
 	
