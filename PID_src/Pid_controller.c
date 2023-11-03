@@ -1,5 +1,6 @@
 #include "Pid_controller.h"
 
+// 初始化函数，设置kp、ki、kd参数
 void PID_Init(PIDController *pid, double kp, double ki, double kd, double output_max)
 {
 	pid->kp = kp;
