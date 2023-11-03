@@ -14,7 +14,7 @@ int main(void)
 	double target2 = 13.7;
 	double output1, output2;
     
-	// 模拟采样反馈值
+	// 模拟采样，得到反馈值
 	double feedback1 = 4.2;
 	double feedback2 = 2.0;
 
